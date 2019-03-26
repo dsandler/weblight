@@ -28,9 +28,11 @@ gcc-avr binutils-avr gdb-avr avr-libc avrdude`. On OS X,
 [CrossPack](https://www.obdev.at/products/crosspack/index.html) works.
 * Install libusb. `sudo apt-get install libusb-dev` works on
   Linux, and `brew install libusb libusb-compat` works on OS X.
+* Install pyusb. `sudo apt-get install python-usb` on Linux, or `sudo pip
+  install pyusb` on other platforms.
 * Build and install the
   [micronucleus command-line tool](https://github.com/micronucleus/micronucleus/tree/master/commandline)
-  to be able to upload to the ATTiny85. Have it somewhere in your PATH.
+  to be able to upload to the ATTiny85. Have it somewhere in your PATH. Don't forget [the udev rule](https://raw.githubusercontent.com/micronucleus/micronucleus/master/commandline/49-micronucleus.rules) if needed.
 * Copy the files in `udev` to `/etc/udev/rules.d/` and then `sudo
   udevadm control --reload-rules`.
 
